@@ -56,7 +56,7 @@ export const SortPage = () => {
 						<Styles.SecretFriendText role={"alert"}>
 							{secretFriend}
 						</Styles.SecretFriendText>
-					)}
+					)} 
 				</Styles.SecretFriend>
 			</Styles.Section>
 		</DefaultLayout>
