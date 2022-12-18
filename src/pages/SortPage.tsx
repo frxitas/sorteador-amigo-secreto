@@ -20,6 +20,9 @@ export const SortPage = () => {
 		e.preventDefault();
 		if (result.has(participantDaVez)) {
 			setSecretFriend(result.get(participantDaVez)!);
+			setTimeout(() => {
+				setSecretFriend('');
+			}, 3000)
 		}
 	};
 

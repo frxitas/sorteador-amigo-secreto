@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { act, fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
 
 import { SortPage } from "./SortPage";
@@ -66,4 +66,35 @@ describe("Sort page", () => {
 		expect(friendSecret).toBeInTheDocument();
 
 	})
+
+	test("friend secret is not visible after 5 seconds", () => {
+		jest.useFakeTimers();
+
+		render(
+			<RecoilRoot>
+				<SortPage />
+			</RecoilRoot>,
+		);
+
+		const select = screen.getByPlaceholderText("Selecione o seu nome")
+		fireEvent.change(select, {
+			target: {
+				value: participants[1]
+			}
+		})
+
+		const button = screen.getByRole("button")
+		fireEvent.click(button)
+
+		let friendSecret: HTMLElement | null = screen.getByRole('alert');
+		expect(friendSecret).toBeInTheDocument();
+
+		act(() => {
+			jest.runAllTimers();
+		})
+		
+		friendSecret = screen.queryByRole("alert");
+		expect(friendSecret).not.toBeInTheDocument();
+	})
+
 });
