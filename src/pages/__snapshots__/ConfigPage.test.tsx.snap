@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`config page correctly render 1`] = `
+<div>
+  <section
+    class="css-12tmq8n"
+  >
+    <header
+      class="css-j1px08"
+    >
+      Sorteador de Amigo Secreto
+    </header>
+    <div
+      class="css-o7m9iu"
+    >
+      <section>
+        <h3>
+          Vamos começar!
+        </h3>
+        <form>
+          <div
+            class="css-831njy"
+          >
+            <input
+              class="css-1c8qenx"
+              placeholder="Insira o nome do participante"
+              type="text"
+              value=""
+            />
+            <button
+              class="css-ovsbhy"
+              disabled=""
+            >
+              Adicionar
+            </button>
+          </div>
+          
+        </form>
+        <div
+          class="css-y52p8w"
+        >
+          <ul
+            class="css-1ro3o6z"
+          />
+        </div>
+        <footer
+          class="css-1j2lcdp"
+        >
+          <button
+            class="css-6wnd70"
+            disabled=""
+          >
+            start draw
+          </button>
+        </footer>
+      </section>
+    </div>
+  </section>
+</div>
+`;
