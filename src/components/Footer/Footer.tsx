@@ -18,7 +18,7 @@ export const Footer = () => {
 	return (
 		<Styles.Footer>
 			<Styles.Button disabled={participants.length < 3} onClick={handleStart}>
-				start draw
+				Iniciar
 			</Styles.Button>
 		</Styles.Footer>
 	);

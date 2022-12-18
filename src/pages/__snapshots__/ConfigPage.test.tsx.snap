@@ -50,7 +50,7 @@ exports[`config page correctly render 1`] = `
             class="css-6wnd70"
             disabled=""
           >
-            start draw
+            Iniciar
           </button>
         </footer>
       </section>
